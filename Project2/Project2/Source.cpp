@@ -1,39 +1,31 @@
 #include <iostream>
 using namespace std;
 
-class counter
+class point
 {
 private:
-	unsigned int count; 
-
-public: 
-	//constructer
-	counter() :count(0) { };
-	//functions
-	void incCount()
+	double x, y; 
+public:
+	point():x(0),y(0) {  };
+	void setPoint(double p1, double p2)
 	{
-		count++;
+		x = p1;
+		y = p2;
 	}
-	int getCount()
+	
+	
+	void showPoint()
 	{
-		return count; 
+		cout << "(x,y) = " << x << "," << y << endl;
 	}
-
 };
 int main()
 {
-	counter c1,c2;
-
-	cout << "\nc1= " << c1.getCount();
-	c1.incCount();
-	cout << "\nc1= " << c1.getCount();
-	cout << "\nc2= " << c2.getCount();
-	c2.incCount();
-	cout << "\nc2= " << c2.getCount();
-
 	
-
-
+	point p1;
+	p1.showPoint();
+	p1.setPoint(2, 32.3);
+	p1.showPoint();
 	
 	system("pause");
 	return 0; 
